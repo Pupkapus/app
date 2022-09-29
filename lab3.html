@@ -12,7 +12,28 @@
         {
             alert( null || 2 || undefined );
         }
+        function z2()
+        {
+            alert( alert(1) || 2 || alert(3) );
+        }
+        function z3()
+        {
+            alert( 1 && null && 2 );
+        }
+        function z4()
+        {
+            alert( alert(1) && alert(2) );
+        }
+        function z5()
+        {
+            alert( null || 2 && 3 || 4 );
+        }
+    
     </script>
     <p> 1zadanie </p> <button type="button" onclick=z1()>Try it</button>
+    <p> 2zadanie </p> <button type="button" onclick=z2()>Try it</button>
+    <p> 3zadanie </p> <button type="button" onclick=z3()>Try it</button>
+    <p> 4zadanie </p> <button type="button" onclick=z4()>Try it</button>
+    <p> 5zadanie </p> <button type="button" onclick=z5()>Try it</button>
 </body>
 </html>
