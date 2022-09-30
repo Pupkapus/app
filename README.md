@@ -163,7 +163,7 @@
             alert("Основание 1 = 4, основание 2 = 6, высота = 4, периметр = " + P.toFixed(2));
         }
     </script>
-     <p> 1 zadanie </p> <button type="button" onclick=z1()>Try it</button>
+     <p> 1zadanie </p> <button type="button" onclick=z1()>Try it</button>
      <p> 2 zadanie </p> <button type="button" onclick=z2()>Try it</button>
      <p> 3 zadanie </p> <button type="button" onclick=z3()>Try it</button>
      <p> 4 zadanie </p> <button type="button" onclick=z4()>Try it</button>
