@@ -7,7 +7,7 @@
 <p style = "text-align: center;">Кафедра информатики</p>
 <p style = "text-align: center;">Пак Никита Витальевич</p>
 <p style = "text-align: center;">Лабораторная работа №3</p>
-<p style = "text-align: center;">01.03.02 Прикладная математика и информатика
+<p style = "text-align: right;">01.03.02 Прикладная математика и информатика
 </p>
 Научный руководитель
 Травкин Иван Юрьевич
