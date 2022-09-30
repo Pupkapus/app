@@ -1,5 +1,8 @@
  ```js 
+        function z1()
+        {
             alert( null || 2 || undefined );
+        }
         function z2()
         {
             alert( alert(1) || 2 || alert(3) );
@@ -224,3 +227,4 @@
             return chislo;
         }
     ```
+document.write(z1());
