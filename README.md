@@ -1,187 +1,262 @@
-<script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
         function z1()
         {
-            let name = "Ilya";
-            alert(`hello ${1}` );
-            alert( `hello ${"name"}` ); 
-            alert( `hello ${name}` ); 
+            alert( null || 2 || undefined );
         }
         function z2()
         {
-            let person = prompt("Как вас зовут?", "Окей");
-            alert(person);
+            alert( alert(1) || 2 || alert(3) );
         }
         function z3()
         {
-            let a =1, b = 1;
-            let c = ++a; 
-            let d = b++; 
-            alert('c= ' + c);
-            alert('d= ' + d);
+            alert( 1 && null && 2 );
         }
         function z4()
         {
-            let a = 2;
-            let x = 1 + (a *= 2);
-            alert('a= ' + a);
-            alert('x= ' + x);
+            alert( alert(1) && alert(2) );
         }
         function z5()
         {
-            console.log( "" + 1 + 0);
-            console.log( "" - 1 + 0);
-            console.log(true + false);
-            console.log(6 / "3");
-            console.log("2" * "3");
-            console.log(4 + 5 + "px");
-            console.log("$" + 4 + 5);
-            console.log("4" - 2);
-            console.log("4px" - 2);
-            console.log(7 / 0);
-            console.log("  -9  " + 5);
-            console.log("  -9  " - 5);
-            console.log(null + 1);
-            console.log(undefined + 1);
-            console.log(" \t \n" - 2);
+            alert( null || 2 && 3 || 4 );
         }
         function z6()
         {
-            let a = +prompt("Первое число?", 1);
-            let b = +prompt("Второе число?", 2);
-            alert(a + b); 
+            let age = prompt("Введите число ", "");
+            if ((age>=14)&&(age<=90))
+            {
+                alert("age в диапозоне");
+            }
+            else {alert("Не в диапазоне");}
         }
         function z7()
         {
-            var p = Math.PI;
-            console.log(p.toFixed(2));
+            let age = prompt("Введите число ", "");   
+            if (!((age>=14)&&(age<=90)))
+            {
+                alert("age не в диапозоне");
+            }
+            if (((age<14)||(age>90)))
+            {
+                alert("age не в диапозоне");
+            }
         }
         function z8()
         {
-            let a = prompt("Введите число", 1);
-            alert('Вы ввели число ' + a);
+            if (-1 || 0) alert( 'first' );
+            if (-1 && 0) alert( 'second' );
+            if (null || -1 && 1) alert( 'third' );
         }
         function z9()
         {
-            let num = prompt("Введите число ", "");
-            alert(num + "- вот какое число вы ввели");
+            let login = prompt("Введите логин:", "");
+            if (login == "Админ")
+            {
+                let password = prompt("Введите пароль:", "");
+                if (password == "Я главный")
+                {
+                    alert("Здравствуйте!");
+                }
+                else if ((password == "")||(password == null))
+                {
+                    alert("Отменено");
+                }
+                else
+                {
+                    alert("Неверный пароль");
+                }
+            }
+            else if ((login == "")||(login == null))
+            {
+                alert("Отменено");
+            }
+            else
+            {
+                alert("Я вас не знаю");
+            }
         }
         function z10()
-        {
-            let a = 5;
-            let p = 4*5;
-            alert("Периметр квадрата со сторной a=" + a +  " равен" + p )
+        {   
+            let i = 3;
+            while (i) 
+            {
+                alert( i-- );
+            }
         }
         function z11()
         {
-            let r=9;
-            let d=9*2;
-            alert("Димаетр окружности с радиусом 9 равен " + d);
+            alert("Первый способ");
+            let i = 0;
+            while (++i < 5) alert( i );
+            alert("Второй способ");
+            i = 0;
+            while (i++ < 5) alert( i );
         }
         function z12()
         {
-            let r = 6350;
-            let h =1;
-            let g = Math.sqrt(h * (2 * r + h));
-            alert("Расстояние до линии горизонта от точки заданной над Землей = " + g.toFixed(2));
+            alert("Первый цикл");
+            for (let i = 0; i < 5; i++) alert( i ); 
+            alert("Второй цикл");
+            for (let i = 0; i < 5; ++i) alert( i );
         }
         function z13()
         {
-            let a =  5;
-            let S = a*a;
-            let V = a*a*a;
-            alert("объем куба = " + V + " площадь боковой поверхности равен = " + S); 
+            for (let i = 2; i <= 10; i++)
+            {
+                if (i % 2==0)
+                {alert(i);}
+            }
         }
         function z14()
         {
-            let r = 4;
-            let C = 2 * Math.PI * r;
-            let S = (r*r) * Math.PI;
-            alert("Длина окружности = " + C.toFixed(2) + " Площадь круга = " + S.ToFixed(2));
+            let i=0;
+            while (i < 3) 
+            {
+                alert( `number ${i}!` );
+                i++;
+            }
         }
         function z15()
         {
-            let a = 3;
-            let b = 5;
-            alert("до преобразований a=" + a + ", b=" + b);
-            a = a + b;
-            b = b - a 
-            b = -b;
-            a = a -b;
-            alert("после преобразований a=" + a + ",  b=" + b);
+            let num = prompt("Введите число","");
+            while (num<100)
+            {
+                num = prompt("Введите еще раз число, но больше этого","")
+            }
+            alert(num);
         }
         function z16()
         {
-            let a=2,b=4,c=8;
-            let ar=(a+b+c)/3;
-            let ge=Math.sqrt(a*b*c);
-            alert("среднее арифметическое= " + ar.toFixed(2) + " среднее геометрическое = " + ge);
+            let num = prompt("Введите конец интервала","");
+            alert(2);
+            for (let i=3;i<=num;i++)
+            {
+                let proverka = true;
+                for (let j = 2; j < i; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        proverka = false;
+                        break;
+                    }
+                }
+                if (proverka==true)
+                {alert(i);}
+            }
         }
         function z17()
         {
-            let m = 0.048;
-            let V = 0.00002;
-            let ro = m/V;
-            alert("плотность тела=" + ro);
+            let browser = prompt("Введите название браузера","");
+            if (browser=='Edge')
+            {alert( "You've got the Edge!" );}
+            else if (browser=='Chrome')
+            {alert( "You've got the Chrome!" );}
+            else if(browser=='Firefox')
+            {alert( "You've got the Firefox!" );}
+            else if(browser=='Safari')
+            {alert( "You've got the Safari!" );}
+            else if(browser=='Opera')
+            alert( 'Okay we support these browsers too' );
+            else{alert( 'We hope that this page looks ok!' );}
         }
         function z18()
         {
-            let nas = 37863;
-            let S = 2.02;
-            let plot = nas/S;
-            alert("Плотность населения Монако= " + plot.toFixed(2));
+            const number = +prompt('Введите число между 0 и 3', '');
+            switch(number)
+            {
+                case 0:
+                    alert('Вы ввели число 0');
+                    break;
+                case 1:
+                    alert('Вы ввели число 1');
+                    break;
+                default:
+                    alert('Вы ввели число 2, а может и 3');
+                    break;
+            }
         }
         function z19()
         {
-            let kat1 = 6;
-            let kat2 = 8;
-            let gip = Math.sqrt(kat1*kat1 + kat2*kat2);
-            alert("катет1=6б катет2=8, гипотенуза =" + gip);
+            let vozrast = prompt('Введите ваш возраст', '');
+            checkAge(vozrast);
+        }
+        function checkAge(age) 
+        {
+            if (age > 18) {
+            return true;
+            }
+            // ...
+            return confirm('Родители разрешили?');
         }
         function z20()
         {
-            let r =5;
-            let R=10;
-            let Skol=(Math.PI*R*R)-(Math.PI*r*r);
-            alert("радиус внутр. кольца 5, радиус внешн. кольца 10, S кольца=" + Skol.toFixed(2));
+            let vozrast = prompt('Введите ваш возраст', '');
+            checkAge1(vozrast);
+            checkAge2(vozrast);
+        }
+        function checkAge1(age) {
+        return (age > 18) ? true : confirm('Родители разрешили?');
+        }
+        function checkAge2(age) {
+        return (age > 18) || confirm('Родители разрешили?');
         }
         function z21()
         {
-            let kat1 = 6;
-            let kat2 = 8;
-            let gip = Math.sqrt(kat1*kat1 + kat2*kat2);
-            let P=kat1+kat2+gip;
-            alert("периметр треугольника с катетами 6, 8 =" + P)
+            let A = prompt("Введите число a","");
+            let B = prompt("Введите число b","");
+            alert(min(A,B));
+        }
+        function min(a,b)
+        {
+            if (a>b)
+            {return b;}
+            else{return a;}
         }
         function z22()
         {
-            let osn1=4;
-            let osn2=6;
-            let h=4; 
-            let temp = osn2-osn1;
-            let temp1= Math.sqrt(temp*temp+h*h);
-            let P=osn1+osn2+(2*temp1);
-            alert("Основание 1 = 4, основание 2 = 6, высота = 4, периметр = " + P.toFixed(2));
+            let x = prompt("Введите число x","");
+            let n = prompt("Введите число n","");
+            alert(pow(x,n));
+        }
+        function pow(x,n)
+        {
+            let chislo=1;
+            for (let i = 0; i < n; i++)
+            {
+                chislo*=x;
+            }
+            return chislo;
         }
     </script>
-     <p> 1zadanie </p> <button type="button" onclick=z1()>Try it</button>
-     <p> 2 zadanie </p> <button type="button" onclick=z2()>Try it</button>
-     <p> 3 zadanie </p> <button type="button" onclick=z3()>Try it</button>
-     <p> 4 zadanie </p> <button type="button" onclick=z4()>Try it</button>
-     <p> 5 zadanie </p> <button type="button" onclick=z5()>Try it</button>
-     <p> 6 zadanie </p> <button type="button" onclick=z6()>Try it</button>
-     <p> 7 zadanie </p> <button type="button" onclick=z7()>Try it</button>
-     <p> 8 zadanie </p> <button type="button" onclick=z8()>Try it</button>
-     <p> 9 zadanie </p> <button type="button" onclick=z9()>Try it</button>
-     <p> 10 zadanie </p> <button type="button" onclick=z10()>Try it</button>
-     <p> 11 zadanie </p> <button type="button" onclick=z11()>Try it</button>
-     <p> 12 zadanie </p> <button type="button" onclick=z12()>Try it</button>
-     <p> 13 zadanie </p> <button type="button" onclick=z13()>Try it</button>
-     <p> 14 zadanie </p> <button type="button" onclick=z14()>Try it</button>
-     <p> 15 zadanie </p> <button type="button" onclick=z15()>Try it</button>
-     <p> 16 zadanie </p> <button type="button" onclick=z16()>Try it</button>
-     <p> 17 zadanie </p> <button type="button" onclick=z17()>Try it</button>
-     <p> 18 zadanie </p> <button type="button" onclick=z18()>Try it</button>
-     <p> 19 zadanie </p> <button type="button" onclick=z19()>Try it</button>
-     <p> 20 zadanie </p> <button type="button" onclick=z20()>Try it</button>
-     <p> 21 zadanie </p> <button type="button" onclick=z21()>Try it</button>
-     <p> 22 zadanie </p> <button type="button" onclick=z22()>Try it</button>
+    <p> 1zadanie </p> <button type="button" onclick=z1()>Try it</button>
+    <p> 2zadanie </p> <button type="button" onclick=z2()>Try it</button>
+    <p> 3zadanie </p> <button type="button" onclick=z3()>Try it</button>
+    <p> 4zadanie </p> <button type="button" onclick=z4()>Try it</button>
+    <p> 5zadanie </p> <button type="button" onclick=z5()>Try it</button>
+    <p> 6zadanie </p> <button type="button" onclick=z6()>Try it</button>
+    <p> 7zadanie </p> <button type="button" onclick=z7()>Try it</button>
+    <p> 8zadanie </p> <button type="button" onclick=z8()>Try it</button>
+    <p> 9zadanie </p> <button type="button" onclick=z9()>Try it</button>
+    <p> 10zadanie </p> <button type="button" onclick=z10()>Try it</button>
+    <p> 11zadanie </p> <button type="button" onclick=z11()>Try it</button>
+    <p> 12zadanie </p> <button type="button" onclick=z12()>Try it</button>
+    <p> 13zadanie </p> <button type="button" onclick=z13()>Try it</button>
+    <p> 14zadanie </p> <button type="button" onclick=z14()>Try it</button>
+    <p> 15zadanie </p> <button type="button" onclick=z15()>Try it</button>
+    <p> 16zadanie </p> <button type="button" onclick=z16()>Try it</button>
+    <p> 17zadanie </p> <button type="button" onclick=z17()>Try it</button>
+    <p> 18zadanie </p> <button type="button" onclick=z18()>Try it</button>
+    <p> 19zadanie </p> <button type="button" onclick=z19()>Try it</button>
+    <p> 20zadanie </p> <button type="button" onclick=z20()>Try it</button>
+    <p> 21zadanie </p> <button type="button" onclick=z21()>Try it</button>
+    <p> 22zadanie </p> <button type="button" onclick=z22()>Try it</button>
+</body>
+</html>
