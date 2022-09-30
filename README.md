@@ -1,4 +1,10 @@
-```javascript
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
         function z1()
         {
             alert( null || 2 || undefined );
@@ -226,5 +232,28 @@
             }
             return chislo;
         }
-```
-### z1();
+    </script>
+    <p> 1zadanie </p> <button type="button" onclick=z1()>Try it</button>
+    <p> 2zadanie </p> <button type="button" onclick=z2()>Try it</button>
+    <p> 3zadanie </p> <button type="button" onclick=z3()>Try it</button>
+    <p> 4zadanie </p> <button type="button" onclick=z4()>Try it</button>
+    <p> 5zadanie </p> <button type="button" onclick=z5()>Try it</button>
+    <p> 6zadanie </p> <button type="button" onclick=z6()>Try it</button>
+    <p> 7zadanie </p> <button type="button" onclick=z7()>Try it</button>
+    <p> 8zadanie </p> <button type="button" onclick=z8()>Try it</button>
+    <p> 9zadanie </p> <button type="button" onclick=z9()>Try it</button>
+    <p> 10zadanie </p> <button type="button" onclick=z10()>Try it</button>
+    <p> 11zadanie </p> <button type="button" onclick=z11()>Try it</button>
+    <p> 12zadanie </p> <button type="button" onclick=z12()>Try it</button>
+    <p> 13zadanie </p> <button type="button" onclick=z13()>Try it</button>
+    <p> 14zadanie </p> <button type="button" onclick=z14()>Try it</button>
+    <p> 15zadanie </p> <button type="button" onclick=z15()>Try it</button>
+    <p> 16zadanie </p> <button type="button" onclick=z16()>Try it</button>
+    <p> 17zadanie </p> <button type="button" onclick=z17()>Try it</button>
+    <p> 18zadanie </p> <button type="button" onclick=z18()>Try it</button>
+    <p> 19zadanie </p> <button type="button" onclick=z19()>Try it</button>
+    <p> 20zadanie </p> <button type="button" onclick=z20()>Try it</button>
+    <p> 21zadanie </p> <button type="button" onclick=z21()>Try it</button>
+    <p> 22zadanie </p> <button type="button" onclick=z22()>Try it</button>
+</body>
+</html>
