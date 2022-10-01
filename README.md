@@ -1,8 +1,8 @@
-<p style="text-align:center">МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ
+<div style="text-align:center">МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ
 РОССИЙСКОЙ ФЕДЕРАЦИИ
 ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ
 ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ
-«САХАЛИНСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ»</p>
+«САХАЛИНСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ»</div>
 <p style = "text-align: center;">Институт естественных наук и техносферной безопасности</p>
 <p style = "text-align: center;">Кафедра информатики</p>
 <p style = "text-align: center;">Пак Никита Витальевич</p>
@@ -244,7 +244,7 @@
             return chislo;
         }
     ```
-</script>
+
     <p> 1zadanie </p> <button type="button" onclick=z1()>Try it</button>
     <p> 2zadanie </p> <button type="button" onclick=z2()>Try it</button>
     <p> 3zadanie </p> <button type="button" onclick=z3()>Try it</button>
@@ -267,4 +267,4 @@
     <p> 20zadanie </p> <button type="button" onclick=z20()>Try it</button>
     <p> 21zadanie </p> <button type="button" onclick=z21()>Try it</button>
     <p> 22zadanie </p> <button type="button" onclick=z22()>Try it</button>
-</body>
+
