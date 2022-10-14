@@ -274,5 +274,5 @@
     <p> 20zadanie </p> <button type="button" onclick=z20()>Try it</button>
     <p> 21zadanie </p> <button type="button" onclick=z21()>Try it</button>
     <p> 22zadanie </p> <button type="button" onclick=z22()>Try it</button>
-
 ```
+<img src="scr1.jpg" alt = "23">
