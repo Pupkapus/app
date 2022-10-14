@@ -275,4 +275,4 @@
     <p> 21zadanie </p> <button type="button" onclick=z21()>Try it</button>
     <p> 22zadanie </p> <button type="button" onclick=z22()>Try it</button>
 ```
-<img src=app\scr1.png alt = "23">
+<img src="C:\Users\nikit\OneDrive\Рабочий стол\3 курс 1 семестр\вебы2.0\git\app\scr1.png" alt = "23">
