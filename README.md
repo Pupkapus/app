@@ -14,7 +14,7 @@
 <p align = "right;" >Соболев Евгений Игоревич</p>
 <p align = "center;" >Южно-Сахалинск</p>
 <p align = "center;" >2022 г.</p>
-<p align = "center;">**Введение**</p>
+<p align = "center;" ><b>Введение</b></p>
 <p align = "center;" >РЕШЕНИЕ ЗАДАЧ</p>
  
  ```js 
