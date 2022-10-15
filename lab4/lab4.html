@@ -10,8 +10,15 @@
     <script>
         function z1()
         {
-            
-
+            let x = prompt("Введите x","");
+            if (x>0)
+            {
+                y = Math.pow(Math.sin(x),2);
+            }
+            else{
+                y = 1+2*(Math.sin(x*x));
+            }
+            alert("Ответ: " + y);
         }
 
     </script>
