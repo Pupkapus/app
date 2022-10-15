@@ -20,8 +20,26 @@
             }
             alert("Ответ: " + y);
         }
+        function z2()
+        {
+            let chislo = prompt("Введите число","");
+            if (chislo<=9999)
+            {
+                let m = chislo, a=0;
+                for (let i= 1; i<4; i++)
+                {
+                    a = a*10 + m % 10;
+                    m = m / 10;
+                }
+                if (a==n)
+                {alert('Полиндром!');}
+                else{alert('НЕ ПОЛИНДРОМ!')}
+            }
+            else{alert('Введите четырехзначное число!')}
+        }
 
     </script>
-    <p> 1zadanie </p> <button type="button" onclick=z1()>Try it</button>
+    <p> 1zadanie </p> <button type="button" onclick=z1()>вычисление y</button>
+    <p> 2zadanie </p> <button type="button" onclick=z2()>Палиндром</button>
 </body>
 </html>
