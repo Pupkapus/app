@@ -26,12 +26,12 @@
             if (chislo<=9999)
             {
                 let m = chislo, a=0;
-                for (let i= 1; i<4; i++)
+                for (let i= 1; i< 4; i++)
                 {
                     a = a*10 + m % 10;
                     m = m / 10;
                 }
-                if (a==n)
+                if (a==chislo)
                 {alert('Полиндром!');}
                 else{alert('НЕ ПОЛИНДРОМ!')}
             }
