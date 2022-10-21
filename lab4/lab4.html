@@ -22,24 +22,63 @@
         }
         function z2()
         {
+            let a,b,c,d;
             let chislo = prompt("Введите число","");
-            if (chislo<=9999)
+            if ((chislo<=9999)&&(chislo>=1000))
             {
-                let m = chislo, a=0;
-                for (let i= 1; i< 4; i++)
-                {
-                    a = a*10 + m % 10;
-                    m = m / 10;
-                }
-                if (a==chislo)
-                {alert('Полиндром!');}
-                else{alert('НЕ ПОЛИНДРОМ!')}
+                a=parseInt(chislo/1000);
+                b=(parseInt(chislo/100))%10;
+                c=(parseInt(chislo/10))%10;
+                d=chislo%10;
+                if ((a==d)&&(b==c))
+                {alert(chislo+ "- полиндром!");}
+                else {alert(chislo + "- не полиндром!");}
             }
-            else{alert('Введите четырехзначное число!')}
+            else{
+                alert("Неправильно введено число!");
+                z2();
+            }
         }
-
+        function z3()
+        {
+            let visokos = prompt("Введите год","");
+            if (visokos%4==0)
+            { alert(visokos + "- высокосный год!");}
+            else{alert(visokos + "- не высокосный год!");}
+        }
+        function z4()
+        {
+            let y;
+            let x = prompt("Введите x","");
+            if (x<-1)
+            {y=-1;}
+            else if(x>-1)
+            {y=x;}
+            else{y=1;}
+            alert("Ответ: " + y);
+        }
+        function z5()
+        {
+            let m = prompt("Введите номер месяца","");
+            if((m>=3)&&(m<=5))
+            {alert("Весна!");}
+            else if((m>=6)&&(m<=8))
+            {alert("Лето!");}
+            else if((m>=9)&&(m<=11))
+            {alert("Осень!");}
+            else if((m==12)||(m==1)||(m==2))
+            {alert("Зима!");}
+            else{
+                alert("Введите номер месяца 1-12");
+                z5();
+            }
+        }
+        
     </script>
     <p> 1zadanie </p> <button type="button" onclick=z1()>вычисление y</button>
     <p> 2zadanie </p> <button type="button" onclick=z2()>Палиндром</button>
+    <p> 3zadanie </p> <button type="button" onclick=z3()>Высокосный год?</button>
+    <p> 4zadanie </p> <button type="button" onclick=z4()>функция с 3 условиями</button>
+    <p> 5zadanie </p> <button type="button" onclick=z5()>Время года</button>
 </body>
 </html>
