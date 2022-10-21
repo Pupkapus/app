@@ -73,12 +73,34 @@
                 z5();
             }
         }
-        
+        function z6()
+        {
+            let stroka;
+            let m = prompt("Введите номер масти 1-4","");           
+            if (m==1){stroka = "пики";}
+            else if (m==2){stroka = "трефы";}
+            else if (m==3){stroka = "бубны";}
+            else if (m==4){stroka = "черви";}
+            else{alert("1-4, ПОЖАЛУЙСТА!"); z6();}
+            let k = prompt("Введите номер карты 6-14","");
+            if ((k>=6)&&(k<=10)){stroka+=" "+k;}
+            else if (k==11){stroka+=" валет";}
+            else if (k==12){stroka+=" дама";}
+            else if (k==13){stroka+=" король";}
+            else if (k==14){stroka+=" туз";}
+            else {alert("6-14, ПОЖАЛУЙСТА!"); z6();}
+            alert(stroka);
+        }
+        function z7()
+        {
+            
+        }
     </script>
     <p> 1zadanie </p> <button type="button" onclick=z1()>вычисление y</button>
     <p> 2zadanie </p> <button type="button" onclick=z2()>Палиндром</button>
     <p> 3zadanie </p> <button type="button" onclick=z3()>Высокосный год?</button>
     <p> 4zadanie </p> <button type="button" onclick=z4()>функция с 3 условиями</button>
     <p> 5zadanie </p> <button type="button" onclick=z5()>Время года</button>
+    <p> 6zadanie по заданным двум числам определить название карты </p> <button type="button" onclick=z6()>Картишки</button>
 </body>
 </html>
