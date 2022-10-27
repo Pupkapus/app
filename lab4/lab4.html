@@ -91,28 +91,148 @@
             else {alert("6-14, ПОЖАЛУЙСТА!"); z6();}
             alert(stroka);
         }
-        function z7()
+        function z7()//
         {
-
+            
         }
         function z8()
         {
-
+            var mass = [];
+            mass[0] = 9;
+            let otvet = mass[0].toString() + ', ';
+            for (let i = 1; i < 10; i++)
+            {
+                mass[i] = mass[i-1] + 9;
+                otvet += mass[i].toString() + ', ';
+            }
+            document.getElementById("8z").innerHTML = otvet;
         }
         function z9()
         {
-
+            var mass = [];
+            for (let i = 2; i <= 20; i++) 
+            {
+                mass[i] = Math.sin(i).toFixed(2);
+                console.log('sin['+ i +']=' + mass[i]);
+            }
         }
         function z10()
         {
-            
+            let sum = 100, sumb=0,sumv=0,sumg=0;
+            for (let i=101; i<=500; i++)
+            {
+                sum += i;
+            }
+            alert('a)сумму всех целых чисел от 100 до 500 = ' + sum);
+            let a = prompt("Введите число a(a<=500)","");
+            if (a>500)
+            {
+                alert('a<=500');
+                z10();
+            }
+            else {
+                for (i = Number(a); i <= 500; i++)
+                {
+                    sumb += i;
+                }
+            }
+            alert('б)сумму всех целых чисел от a до 500 = ' + sumb);
+            let b = prompt("Введите число b(b>=-10)","");
+            if (b<-10)
+            {
+                alert('b>=-10');
+                z10();
+            }
+            else {
+                for (i = -10; i <= Number(b); i++)
+                {
+                    sumv += i;
+                }
+            }
+            alert('в)сумму всех целых чисел от -10 до b = ' + sumv);
+
+            a = prompt("Введите число a(b>=a)","");
+            b = prompt("Введите число b(b>=a)","");
+            if (a>b)
+            {
+                alert('b>=a');
+                z10();
+            }
+            else{
+                for (i = Number(a); i <= Number(b); i++)
+                {
+                    sumg += i;
+                }
+            }
+            alert('г)сумму всех целых чисел от a до b = ' + sumg);
+        }
+        function z11()
+        {
+            let n = prompt("Введите число n","");
+            let summ = 1;
+            for (let i = 2; i<=n;i++)
+            {
+                summ += 1/i;
+            }
+            document.getElementById("11z").innerHTML = summ.toFixed(2);
+        }
+        function z12()//
+        {
+           let x = prompt("Введите число x","");
+           let y = prompt("Введите число y",""); 
+
+        }
+        function z13()
+        {
+            let step=0, temp = 1;
+            let n = prompt("Введите число n","");
+            for (let i=0 ; i<n;i++)
+            {
+                step += temp;
+                temp +=2;
+            }
+            alert(n + " в квадрате = " + step);
+        }
+        function z14()
+        {
+            let summ=Math.sqrt(50);
+            for (let i=49; i>=1;i--)
+            {
+                summ = Math.sqrt(i + summ);
+            }
+            alert('сумма равна: ' + summ)
+        }
+        function z15()
+        {
+            let s=0, count=0;
+            let mass=[];
+            let  n = Math.floor(Math.random() * 10);
+            for (let i=1; i < n; i++)
+            {
+                mass[i]=Math.floor(Math.random() * 10);
+            }
+            mass[n] = 0;
+            for (let i=1; i <= n; i++)
+            {
+                s += mass[i];
+                count++; 
+            }
+            alert("сумма всех чисел=" + s + ", " + "количество чисел =" + count);
         }
     </script>
     <p> 1zadanie </p> <button type="button" onclick=z1()>вычисление y</button>
     <p> 2zadanie </p> <button type="button" onclick=z2()>Палиндром</button>
     <p> 3zadanie </p> <button type="button" onclick=z3()>Высокосный год?</button>
     <p> 4zadanie </p> <button type="button" onclick=z4()>функция с 3 условиями</button>
-    <p> 5zadanie </p> <button type="button" onclick=z5()>Время года</button>
+    <p> 5zadanie </p> <button type="button" onclick=z5()>Время года</button> 
     <p> 6zadanie по заданным двум числам определить название карты </p> <button type="button" onclick=z6()>Картишки</button>
-</body>
+    <p> 7zadanie </p> <button type="button" onclick=z7()>Лунный календарь</button>
+    <p> 8zadanie </p> <button type="button" onclick=z8()>Таблица умножения 9</button><span id="8z"></span>
+    <p> 9zadanie </p> <button type="button" onclick=z9()>Таблица синусов</button><span id="9z"></span>
+    <p> 10zadanie </p> <button type="button" onclick=z10()>а-г</button>
+    <p> 11zadanie </p> <button type="button" onclick=z11()>Сумма ряда до n</button><span id="11z"></span>
+    <p> 12zadanie </p> <button type="button" onclick=z12()>Произведение по двум методикам</button>
+    <p> 13zadanie </p> <button type="button" onclick=z13()>Возведение в степень</button>
+    <p> 14zadanie </p> <button type="button" onclick=z14()>Сумма от корней</button>
+    <p> 15zadanie </p> <button type="button" onclick=z15()>Последовательность до 0</button>
 </html>
