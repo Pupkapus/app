@@ -91,7 +91,7 @@
             else {alert("6-14, ПОЖАЛУЙСТА!"); z6();}
             alert(stroka);
         }
-        function z7()//
+        function z7()
         {
             
         }
@@ -176,11 +176,26 @@
             }
             document.getElementById("11z").innerHTML = summ.toFixed(2);
         }
-        function z12()//
+        function z12()
         {
            let x = prompt("Введите число x","");
            let y = prompt("Введите число y",""); 
+           let result=0;
 
+           for (let i=1; i<=y; i++)
+           {
+                result +=Math.floor(x);
+           }
+           alert("(Первый способ через цикл for)Ответ: " + result);
+
+           result = 0;
+           i=1;
+           while(i<=y)
+           {
+                result += Math.floor(x);
+                i++;
+           }
+           alert("(Первый способ через цикл while)Ответ: " + result);
         }
         function z13()
         {
@@ -209,15 +224,198 @@
             let  n = Math.floor(Math.random() * 10);
             for (let i=1; i < n; i++)
             {
-                mass[i]=Math.floor(Math.random() * 10);
-            }
-            mass[n] = 0;
-            for (let i=1; i <= n; i++)
-            {
+                mass[i]=Math.floor(Math.random() * (9-(-9)))-9;
+                console.log(mass[i]);
                 s += mass[i];
                 count++; 
             }
+            mass[n]=0;
+            count++;
+            console.log(mass[n])
             alert("сумма всех чисел=" + s + ", " + "количество чисел =" + count);
+        }
+        function z16()
+        {
+            let s=0, count=0,midle=0;
+            let mass=[];
+            let  n = Math.floor(Math.random() * 10);
+            for (let i=1; i < n; i++)
+            {
+                mass[i]=Math.floor(Math.random() * 9);
+                console.log(mass[i]);
+                s += mass[i];
+                count++; 
+            }
+            midle=s/count;
+            mass[n]=Math.floor(Math.random()*(-9));
+            console.log(mass[n])
+            alert("среднее арифметическое всех чисел последоваетльности(без учета последнего отрицательного числа): " + midle);
+        }
+        function z17()
+        {
+            var N=prompt("Введите хотя бы четырехзначное число:",);
+            let mass = Array.from(N.toString());
+            let count = 0, newcount = 0, nw=0;
+            let n = mass.length;
+            //a,б,в
+            for(let i = 0; i < n; i++)
+            {
+                if (mass[i]=="3")
+                {count++;}
+                if (mass[i]==mass[n-1])
+                {newcount++;}
+                if (mass[i]%2==0)
+                {nw++;}
+            }
+            alert("a)Количество цифр 3 в числе: " + count + ', ' + 
+            "б)Количество встречающихся последних цифр: " + newcount + 
+            ', ' + "в)Количество четных чисел: " + nw);
+            //г, д, е
+            let summ=0,proizv=0, temp=1,schet=0;
+            for ( i = 0; i < n; i++ )
+            {
+                if(mass[i]>5)
+                {summ+=Math.floor(mass[i]);}
+            }
+            for ( i = 0; i < n; i++ )
+            {
+                if(mass[i]>7)
+                {temp*=Math.floor(mass[i]);}
+            }
+            if (temp>1)
+            proizv = temp;
+
+            for (i = 0; i < n; i++)
+            {
+                if (mass[i]=="5")
+                {schet++;}
+                if (mass[i]=="0")
+                {schet++;}
+            }
+            alert("г)сумма цифр больше 5: " + summ + ', ' + 
+            "д)произведение цифр больше 7: " + proizv + 
+            ', ' + "е)количество встречабщихся в нем 5 и 0: " + schet);
+        }
+        function z18()
+        {
+            let N = 982134567;
+            let mass = Array.from(N.toString());
+            let n = mass.length;
+            let nomer1=0, nomer2=n-1, max1=mass[0], max2=mass[n-1];
+            let nom1=0, nom2=n-1, min1= mass[0], min2=mass[n-1]
+            for (let i=1; i<n; i++)//поиск максимального, минимального числа от начала
+            {
+                if (max1<mass[i])
+                {
+                    max1=mass[i]; 
+                    nomer1=i;
+                }
+                if (min1>mass[i])
+                {
+                    min1=mass[i];
+                    nom1=i;
+                }
+            }
+
+            for (i=n-2; i>=0; i--) //поиск максимального, минимального числа с конца
+            {
+                if (max2<mass[i])
+                {
+                    max2 = mass[i];
+                    nomer2 = i;
+                }
+
+                if (min2>mass[i])
+                {
+                    min2 = mass[i];
+                    nom2 = i;
+                }
+            }
+            alert('номер максимальной цифры с начала: ' + nomer1 + ', номер максимальной цифры с конца: ' + nomer2 + ', номер минимальной цифры с начала: ' + nom1 + ', номер минимальной цифры с конца: ' + nom2);
+        }
+        function prost(number)
+        {
+            var denom = 1;
+            while(++denom < number)
+            {
+                if (number % denom == 0)
+                return false;
+            }
+            return true;
+        }
+        function z19()
+        {
+            let chislo =prompt("Введите число",);
+            let otvet = prost(chislo);
+            if (otvet==true)
+            alert("Простое число")
+            else alert("число не является простым!")
+        }
+        function z20()
+        {
+            let number = 2314;
+            while(number>0)
+            {
+                if (number % 10 > number/10%10)
+                {
+                    number /=10;
+                }
+                else {alert("Число не упорядочено!"); break;}
+                if (number<=0) 
+                alert("Число упорядочено!"); 
+            }
+        }
+        function z21()
+        {
+            let n = prompt("Введите число от 0 до 10000", );
+            let mass=[], nomer=0;
+            for (let i = 1; i<=10000;i++)
+            {
+                mass[i]=i;
+                if (n==mass[i])
+                {
+                    nomer=i;
+                    break;
+                }
+            } 
+            if (nomer==0)
+            {alert('номер такого числа отсутствует')}
+            else {alert("порядковый номер этого числа =" + nomer)}
+
+        }
+        function z22()
+        {
+            let n = prompt("введите натуральное число",);
+            let a = prompt("введите число a",);
+            let b = prompt("введите число b",);
+            let count1=0, count2=0;
+            while (n != 0)
+            {
+                if (a==n%10)
+                {count1++;}
+                if (b==n%10)
+                {count2++;}
+                n = n/10;
+            }
+            if (count1<count2)
+            alert("Да цифра А встречается реже чем цифра В.");
+            else alert("Нет,цифра А встречается не реже чем цифра В.");
+        }
+        function z23()
+        {
+            let a=10
+            console.log("предусловие");
+            while(a<30)
+            {
+                console.log(a);
+                a++;
+            }
+            console.log("постусловие")
+            a=10;
+            do{
+                console.log(a);
+                a++;
+            }while(a<=30)
         }
     </script>
     <p> 1zadanie </p> <button type="button" onclick=z1()>вычисление y</button>
@@ -235,4 +433,12 @@
     <p> 13zadanie </p> <button type="button" onclick=z13()>Возведение в степень</button>
     <p> 14zadanie </p> <button type="button" onclick=z14()>Сумма от корней</button>
     <p> 15zadanie </p> <button type="button" onclick=z15()>Последовательность до 0</button>
-</html>
+    <p> 16zadanie </p> <button type="button" onclick=z16()>Среднее арфиметическое</button>
+    <p> 17zadanie </p> <button type="button" onclick=z17()>a-e</button>
+    <p> 18zadanie </p> <button type="button" onclick=z18()>a-b</button>
+    <p> 19zadanie </p> <button type="button" onclick=z19()>Простое?</button>
+    <p> 20zadanie </p> <button type="button" onclick=z20()>Упорядочено?</button>
+    <p> 21zadanie </p> <button type="button" onclick=z21()>nomer</button>
+    <p> 22zadanie </p> <button type="button" onclick=z22()>AилиB</button>
+    <p> 23zadanie </p> <button type="button" onclick=z23()>Постусловие, предусловие</button>
+    </html>
