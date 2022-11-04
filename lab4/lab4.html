@@ -93,7 +93,81 @@
         }
         function z7()
         {
-            
+            let years = prompt("введите год:", );
+            let ost = Math.floor(years)%12;
+            let ost2= Math.floor(years)%10;
+            let otvet;
+            switch (ost.toString()) {
+                case '0':
+                    otvet="обезьяна";
+                    break;
+                case '1':
+                    otvet="петух";
+                    break;
+                case '2':
+                    otvet="собака";
+                    break;
+                case '3':
+                    otvet="свинья";
+                    break;
+                case '4':
+                    otvet="крыса";
+                    break;
+                case '5':
+                    otvet="корова";
+                    break;
+                case '6':
+                    otvet="тигр";
+                    break;
+                case '7': 
+                    otvet ="заяц";
+                    break;
+                case '8':
+                    otvet="дракон";
+                    break;
+                case '9':
+                    otvet="змея";
+                    break;
+                case '10':
+                    otvet="лошадь";
+                    break;
+                case '11':
+                    otvet="овца";
+                    break;
+            }
+            switch (ost2.toString()) {
+                case '0':
+                    otvet+=" бел.";
+                    break;
+                case '1':
+                    otvet+=" бел.";
+                    break;
+                case '2':
+                    otvet+=" черн.";
+                    break;
+                case '3':
+                    otvet+=" черн.";
+                    break;
+                case '4':
+                    otvet+=" зел.";
+                    break;
+                case '5':
+                    otvet+=" зел.";
+                    break;
+                case '6':
+                    otvet+=" красн.";
+                    break;
+                case '7': 
+                    otvet +=" красн.";
+                    break;
+                case '8':
+                    otvet+=" желт.";
+                    break;
+                case '9':
+                    otvet+=" желт.";
+                    break;
+                }
+            alert(otvet);
         }
         function z8()
         {
