@@ -23,255 +23,489 @@
 <p align = "center" >РЕШЕНИЕ ЗАДАЧ</p>
  
  ```js 
+       <script>
         function z1()
         {
-            alert( null || 2 || undefined );
+            let x = prompt("Введите x","");
+            if (x>0)
+            {
+                y = Math.pow(Math.sin(x),2);
+            }
+            else{
+                y = 1+2*(Math.sin(x*x));
+            }
+            alert("Ответ: " + y);
         }
         function z2()
         {
-            alert( alert(1) || 2 || alert(3) );
+            let a,b,c,d;
+            let chislo = prompt("Введите число","");
+            if ((chislo<=9999)&&(chislo>=1000))
+            {
+                a=parseInt(chislo/1000);
+                b=(parseInt(chislo/100))%10;
+                c=(parseInt(chislo/10))%10;
+                d=chislo%10;
+                if ((a==d)&&(b==c))
+                {alert(chislo+ "- полиндром!");}
+                else {alert(chislo + "- не полиндром!");}
+            }
+            else{
+                alert("Неправильно введено число!");
+                z2();
+            }
         }
         function z3()
         {
-            alert( 1 && null && 2 );
+            let visokos = prompt("Введите год","");
+            if (visokos%4==0)
+            { alert(visokos + "- высокосный год!");}
+            else{alert(visokos + "- не высокосный год!");}
         }
         function z4()
         {
-            alert( alert(1) && alert(2) );
+            let y;
+            let x = prompt("Введите x","");
+            if (x<-1)
+            {y=-1;}
+            else if(x>-1)
+            {y=x;}
+            else{y=1;}
+            alert("Ответ: " + y);
         }
         function z5()
         {
-            alert( null || 2 && 3 || 4 );
+            let m = prompt("Введите номер месяца","");
+            if((m>=3)&&(m<=5))
+            {alert("Весна!");}
+            else if((m>=6)&&(m<=8))
+            {alert("Лето!");}
+            else if((m>=9)&&(m<=11))
+            {alert("Осень!");}
+            else if((m==12)||(m==1)||(m==2))
+            {alert("Зима!");}
+            else{
+                alert("Введите номер месяца 1-12");
+                z5();
+            }
         }
         function z6()
         {
-            let age = prompt("Введите число ", "");
-            if ((age>=14)&&(age<=90))
-            {
-                alert("age в диапозоне");
-            }
-            else {alert("Не в диапазоне");}
+            let stroka;
+            let m = prompt("Введите номер масти 1-4","");           
+            if (m==1){stroka = "пики";}
+            else if (m==2){stroka = "трефы";}
+            else if (m==3){stroka = "бубны";}
+            else if (m==4){stroka = "черви";}
+            else{alert("1-4, ПОЖАЛУЙСТА!"); z6();}
+            let k = prompt("Введите номер карты 6-14","");
+            if ((k>=6)&&(k<=10)){stroka+=" "+k;}
+            else if (k==11){stroka+=" валет";}
+            else if (k==12){stroka+=" дама";}
+            else if (k==13){stroka+=" король";}
+            else if (k==14){stroka+=" туз";}
+            else {alert("6-14, ПОЖАЛУЙСТА!"); z6();}
+            alert(stroka);
         }
         function z7()
         {
-            let age = prompt("Введите число ", "");   
-            if (!((age>=14)&&(age<=90)))
-            {
-                alert("age не в диапозоне");
+            let years = prompt("введите год:", );
+            let ost = Math.floor(years)%12;
+            let ost2= Math.floor(years)%10;
+            let otvet;
+            switch (ost.toString()) {
+                case '0':
+                    otvet="обезьяна";
+                    break;
+                case '1':
+                    otvet="петух";
+                    break;
+                case '2':
+                    otvet="собака";
+                    break;
+                case '3':
+                    otvet="свинья";
+                    break;
+                case '4':
+                    otvet="крыса";
+                    break;
+                case '5':
+                    otvet="корова";
+                    break;
+                case '6':
+                    otvet="тигр";
+                    break;
+                case '7': 
+                    otvet ="заяц";
+                    break;
+                case '8':
+                    otvet="дракон";
+                    break;
+                case '9':
+                    otvet="змея";
+                    break;
+                case '10':
+                    otvet="лошадь";
+                    break;
+                case '11':
+                    otvet="овца";
+                    break;
             }
-            if (((age<14)||(age>90)))
-            {
-                alert("age не в диапозоне");
-            }
+            switch (ost2.toString()) {
+                case '0':
+                    otvet+=" бел.";
+                    break;
+                case '1':
+                    otvet+=" бел.";
+                    break;
+                case '2':
+                    otvet+=" черн.";
+                    break;
+                case '3':
+                    otvet+=" черн.";
+                    break;
+                case '4':
+                    otvet+=" зел.";
+                    break;
+                case '5':
+                    otvet+=" зел.";
+                    break;
+                case '6':
+                    otvet+=" красн.";
+                    break;
+                case '7': 
+                    otvet +=" красн.";
+                    break;
+                case '8':
+                    otvet+=" желт.";
+                    break;
+                case '9':
+                    otvet+=" желт.";
+                    break;
+                }
+            alert(otvet);
         }
         function z8()
         {
-            if (-1 || 0) alert( 'first' );
-            if (-1 && 0) alert( 'second' );
-            if (null || -1 && 1) alert( 'third' );
+            var mass = [];
+            mass[0] = 9;
+            let otvet = mass[0].toString() + ', ';
+            for (let i = 1; i < 10; i++)
+            {
+                mass[i] = mass[i-1] + 9;
+                otvet += mass[i].toString() + ', ';
+            }
+            document.getElementById("8z").innerHTML = otvet;
         }
         function z9()
         {
-            let login = prompt("Введите логин:", "");
-            if (login == "Админ")
+            var mass = [];
+            for (let i = 2; i <= 20; i++) 
             {
-                let password = prompt("Введите пароль:", "");
-                if (password == "Я главный")
-                {
-                    alert("Здравствуйте!");
-                }
-                else if ((password == "")||(password == null))
-                {
-                    alert("Отменено");
-                }
-                else
-                {
-                    alert("Неверный пароль");
-                }
-            }
-            else if ((login == "")||(login == null))
-            {
-                alert("Отменено");
-            }
-            else
-            {
-                alert("Я вас не знаю");
+                mass[i] = Math.sin(i).toFixed(2);
+                console.log('sin['+ i +']=' + mass[i]);
             }
         }
         function z10()
-        {   
-            let i = 3;
-            while (i) 
+        {
+            let sum = 100, sumb=0,sumv=0,sumg=0;
+            for (let i=101; i<=500; i++)
             {
-                alert( i-- );
+                sum += i;
             }
+            alert('a)сумму всех целых чисел от 100 до 500 = ' + sum);
+            let a = prompt("Введите число a(a<=500)","");
+            if (a>500)
+            {
+                alert('a<=500');
+                z10();
+            }
+            else {
+                for (i = Number(a); i <= 500; i++)
+                {
+                    sumb += i;
+                }
+            }
+            alert('б)сумму всех целых чисел от a до 500 = ' + sumb);
+            let b = prompt("Введите число b(b>=-10)","");
+            if (b<-10)
+            {
+                alert('b>=-10');
+                z10();
+            }
+            else {
+                for (i = -10; i <= Number(b); i++)
+                {
+                    sumv += i;
+                }
+            }
+            alert('в)сумму всех целых чисел от -10 до b = ' + sumv);
+
+            a = prompt("Введите число a(b>=a)","");
+            b = prompt("Введите число b(b>=a)","");
+            if (a>b)
+            {
+                alert('b>=a');
+                z10();
+            }
+            else{
+                for (i = Number(a); i <= Number(b); i++)
+                {
+                    sumg += i;
+                }
+            }
+            alert('г)сумму всех целых чисел от a до b = ' + sumg);
         }
         function z11()
         {
-            alert("Первый способ");
-            let i = 0;
-            while (++i < 5) alert( i );
-            alert("Второй способ");
-            i = 0;
-            while (i++ < 5) alert( i );
+            let n = prompt("Введите число n","");
+            let summ = 1;
+            for (let i = 2; i<=n;i++)
+            {
+                summ += 1/i;
+            }
+            document.getElementById("11z").innerHTML = summ.toFixed(2);
         }
         function z12()
         {
-            alert("Первый цикл");
-            for (let i = 0; i < 5; i++) alert( i ); 
-            alert("Второй цикл");
-            for (let i = 0; i < 5; ++i) alert( i );
+           let x = prompt("Введите число x","");
+           let y = prompt("Введите число y",""); 
+           let result=0;
+
+           for (let i=1; i<=y; i++)
+           {
+                result +=Math.floor(x);
+           }
+           alert("(Первый способ через цикл for)Ответ: " + result);
+
+           result = 0;
+           i=1;
+           while(i<=y)
+           {
+                result += Math.floor(x);
+                i++;
+           }
+           alert("(Первый способ через цикл while)Ответ: " + result);
         }
         function z13()
         {
-            for (let i = 2; i <= 10; i++)
+            let step=0, temp = 1;
+            let n = prompt("Введите число n","");
+            for (let i=0 ; i<n;i++)
             {
-                if (i % 2==0)
-                {alert(i);}
+                step += temp;
+                temp +=2;
             }
+            alert(n + " в квадрате = " + step);
         }
         function z14()
         {
-            let i=0;
-            while (i < 3) 
+            let summ=Math.sqrt(50);
+            for (let i=49; i>=1;i--)
             {
-                alert( `number ${i}!` );
-                i++;
+                summ = Math.sqrt(i + summ);
             }
+            alert('сумма равна: ' + summ)
         }
         function z15()
         {
-            let num = prompt("Введите число","");
-            while (num<100)
+            let s=0, count=0;
+            let mass=[];
+            let  n = Math.floor(Math.random() * 10);
+            for (let i=1; i < n; i++)
             {
-                num = prompt("Введите еще раз число, но больше этого","")
+                mass[i]=Math.floor(Math.random() * (9-(-9)))-9;
+                console.log(mass[i]);
+                s += mass[i];
+                count++; 
             }
-            alert(num);
+            mass[n]=0;
+            count++;
+            console.log(mass[n])
+            alert("сумма всех чисел=" + s + ", " + "количество чисел =" + count);
         }
         function z16()
         {
-            let num = prompt("Введите конец интервала","");
-            alert(2);
-            for (let i=3;i<=num;i++)
+            let s=0, count=0,midle=0;
+            let mass=[];
+            let  n = Math.floor(Math.random() * 10);
+            for (let i=1; i < n; i++)
             {
-                let proverka = true;
-                for (let j = 2; j < i; j++)
-                {
-                    if (i % j == 0)
-                    {
-                        proverka = false;
-                        break;
-                    }
-                }
-                if (proverka==true)
-                {alert(i);}
+                mass[i]=Math.floor(Math.random() * 9);
+                console.log(mass[i]);
+                s += mass[i];
+                count++; 
             }
+            midle=s/count;
+            mass[n]=Math.floor(Math.random()*(-9));
+            console.log(mass[n])
+            alert("среднее арифметическое всех чисел последоваетльности(без учета последнего отрицательного числа): " + midle);
         }
         function z17()
         {
-            let browser = prompt("Введите название браузера","");
-            if (browser=='Edge')
-            {alert( "You've got the Edge!" );}
-            else if (browser=='Chrome')
-            {alert( "You've got the Chrome!" );}
-            else if(browser=='Firefox')
-            {alert( "You've got the Firefox!" );}
-            else if(browser=='Safari')
-            {alert( "You've got the Safari!" );}
-            else if(browser=='Opera')
-            alert( 'Okay we support these browsers too' );
-            else{alert( 'We hope that this page looks ok!' );}
+            var N=prompt("Введите хотя бы четырехзначное число:",);
+            let mass = Array.from(N.toString());
+            let count = 0, newcount = 0, nw=0;
+            let n = mass.length;
+            //a,б,в
+            for(let i = 0; i < n; i++)
+            {
+                if (mass[i]=="3")
+                {count++;}
+                if (mass[i]==mass[n-1])
+                {newcount++;}
+                if (mass[i]%2==0)
+                {nw++;}
+            }
+            alert("a)Количество цифр 3 в числе: " + count + ', ' + 
+            "б)Количество встречающихся последних цифр: " + newcount + 
+            ', ' + "в)Количество четных чисел: " + nw);
+            //г, д, е
+            let summ=0,proizv=0, temp=1,schet=0;
+            for ( i = 0; i < n; i++ )
+            {
+                if(mass[i]>5)
+                {summ+=Math.floor(mass[i]);}
+            }
+            for ( i = 0; i < n; i++ )
+            {
+                if(mass[i]>7)
+                {temp*=Math.floor(mass[i]);}
+            }
+            if (temp>1)
+            proizv = temp;
+
+            for (i = 0; i < n; i++)
+            {
+                if (mass[i]=="5")
+                {schet++;}
+                if (mass[i]=="0")
+                {schet++;}
+            }
+            alert("г)сумма цифр больше 5: " + summ + ', ' + 
+            "д)произведение цифр больше 7: " + proizv + 
+            ', ' + "е)количество встречабщихся в нем 5 и 0: " + schet);
         }
         function z18()
         {
-            const number = +prompt('Введите число между 0 и 3', '');
-            switch(number)
+            let N = 982134567;
+            let mass = Array.from(N.toString());
+            let n = mass.length;
+            let nomer1=0, nomer2=n-1, max1=mass[0], max2=mass[n-1];
+            let nom1=0, nom2=n-1, min1= mass[0], min2=mass[n-1]
+            for (let i=1; i<n; i++)//поиск максимального, минимального числа от начала
             {
-                case 0:
-                    alert('Вы ввели число 0');
-                    break;
-                case 1:
-                    alert('Вы ввели число 1');
-                    break;
-                default:
-                    alert('Вы ввели число 2, а может и 3');
-                    break;
+                if (max1<mass[i])
+                {
+                    max1=mass[i]; 
+                    nomer1=i;
+                }
+                if (min1>mass[i])
+                {
+                    min1=mass[i];
+                    nom1=i;
+                }
             }
+
+            for (i=n-2; i>=0; i--) //поиск максимального, минимального числа с конца
+            {
+                if (max2<mass[i])
+                {
+                    max2 = mass[i];
+                    nomer2 = i;
+                }
+
+                if (min2>mass[i])
+                {
+                    min2 = mass[i];
+                    nom2 = i;
+                }
+            }
+            alert('номер максимальной цифры с начала: ' + nomer1 + ', номер максимальной цифры с конца: ' + nomer2 + ', номер минимальной цифры с начала: ' + nom1 + ', номер минимальной цифры с конца: ' + nom2);
+        }
+        function prost(number)
+        {
+            var denom = 1;
+            while(++denom < number)
+            {
+                if (number % denom == 0)
+                return false;
+            }
+            return true;
         }
         function z19()
         {
-            let vozrast = prompt('Введите ваш возраст', '');
-            checkAge(vozrast);
-        }
-        function checkAge(age) 
-        {
-            if (age > 18) {
-            return true;
-            }
-            // ...
-            return confirm('Родители разрешили?');
+            let chislo =prompt("Введите число",);
+            let otvet = prost(chislo);
+            if (otvet==true)
+            alert("Простое число")
+            else alert("число не является простым!")
         }
         function z20()
         {
-            let vozrast = prompt('Введите ваш возраст', '');
-            checkAge1(vozrast);
-            checkAge2(vozrast);
-        }
-        function checkAge1(age) {
-        return (age > 18) ? true : confirm('Родители разрешили?');
-        }
-        function checkAge2(age) {
-        return (age > 18) || confirm('Родители разрешили?');
+            let number = 2314;
+            while(number>0)
+            {
+                if (number % 10 > number/10%10)
+                {
+                    number /=10;
+                }
+                else {alert("Число не упорядочено!"); break;}
+                if (number<=0) 
+                alert("Число упорядочено!"); 
+            }
         }
         function z21()
         {
-            let A = prompt("Введите число a","");
-            let B = prompt("Введите число b","");
-            alert(min(A,B));
-        }
-        function min(a,b)
-        {
-            if (a>b)
-            {return b;}
-            else{return a;}
+            let n = prompt("Введите число от 0 до 10000", );
+            let mass=[], nomer=0;
+            for (let i = 1; i<=10000;i++)
+            {
+                mass[i]=i;
+                if (n==mass[i])
+                {
+                    nomer=i;
+                    break;
+                }
+            } 
+            if (nomer==0)
+            {alert('номер такого числа отсутствует')}
+            else {alert("порядковый номер этого числа =" + nomer)}
+
         }
         function z22()
         {
-            let x = prompt("Введите число x","");
-            let n = prompt("Введите число n","");
-            alert(pow(x,n));
-        }
-        function pow(x,n)
-        {
-            let chislo=1;
-            for (let i = 0; i < n; i++)
+            let n = prompt("введите натуральное число",);
+            let a = prompt("введите число a",);
+            let b = prompt("введите число b",);
+            let count1=0, count2=0;
+            while (n != 0)
             {
-                chislo*=x;
+                if (a==n%10)
+                {count1++;}
+                if (b==n%10)
+                {count2++;}
+                n = n/10;
             }
-            return chislo;
+            if (count1<count2)
+            alert("Да цифра А встречается реже чем цифра В.");
+            else alert("Нет,цифра А встречается не реже чем цифра В.");
         }
-    
-
-    <p> 1zadanie </p> <button type="button" onclick=z1()>Try it</button>
-    <p> 2zadanie </p> <button type="button" onclick=z2()>Try it</button>
-    <p> 3zadanie </p> <button type="button" onclick=z3()>Try it</button>
-    <p> 4zadanie </p> <button type="button" onclick=z4()>Try it</button>
-    <p> 5zadanie </p> <button type="button" onclick=z5()>Try it</button>
-    <p> 6zadanie </p> <button type="button" onclick=z6()>Try it</button>
-    <p> 7zadanie </p> <button type="button" onclick=z7()>Try it</button>
-    <p> 8zadanie </p> <button type="button" onclick=z8()>Try it</button>
-    <p> 9zadanie </p> <button type="button" onclick=z9()>Try it</button>
-    <p> 10zadanie </p> <button type="button" onclick=z10()>Try it</button>
-    <p> 11zadanie </p> <button type="button" onclick=z11()>Try it</button>
-    <p> 12zadanie </p> <button type="button" onclick=z12()>Try it</button>
-    <p> 13zadanie </p> <button type="button" onclick=z13()>Try it</button>
-    <p> 14zadanie </p> <button type="button" onclick=z14()>Try it</button>
-    <p> 15zadanie </p> <button type="button" onclick=z15()>Try it</button>
-    <p> 16zadanie </p> <button type="button" onclick=z16()>Try it</button>
-    <p> 17zadanie </p> <button type="button" onclick=z17()>Try it</button>
-    <p> 18zadanie </p> <button type="button" onclick=z18()>Try it</button>
-    <p> 19zadanie </p> <button type="button" onclick=z19()>Try it</button>
-    <p> 20zadanie </p> <button type="button" onclick=z20()>Try it</button>
-    <p> 21zadanie </p> <button type="button" onclick=z21()>Try it</button>
-    <p> 22zadanie </p> <button type="button" onclick=z22()>Try it</button>
+        function z23()
+        {
+            let a=10
+            console.log("предусловие");
+            while(a<30)
+            {
+                console.log(a);
+                a++;
+            }
+            console.log("постусловие")
+            a=10;
+            do{
+                console.log(a);
+                a++;
+            }while(a<=30)
+        }
+    </script>
 ```
