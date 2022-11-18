@@ -511,7 +511,7 @@
 ```
 <p align = "center" >Codewars</p>
 
-###[Head, Tail, Init and Last]
+[Head, Tail, Init and Last]
 ```js
 function head(arr) {
     return arr[0];
