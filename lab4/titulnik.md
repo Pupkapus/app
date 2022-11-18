@@ -509,3 +509,85 @@
         }
     </script>
 ```
+<p align = "center" >Codewars</p>
+1. Head, Tail, Init and Last
+function head(arr) {
+    return arr[0];
+}
+
+function tail(arr) {
+    return arr.slice(1);
+}
+
+function init(arr) {
+    return arr.slice(0,-1);
+}
+
+function last(arr) {
+    return arr[arr.length-1];
+}
+
+2. Array Deep Count
+function deepCount(arr) {
+    return arr
+        .reduce((acc, val) => {
+            return acc + (Array.isArray(val) ? deepCount(val) : 0);
+        }, arr.length);
+};
+
+3. Length of missing array
+function getLengthOfMissingArray(arrayOfArrays) {
+    if (arrayOfArrays === null || arrayOfArrays.length == 0)
+        return 0;
+
+    let sum = 0, min = Number.MAX_VALUE, max = Number.MIN_VALUE;
+
+    for (const arr of arrayOfArrays) {
+        if (arr === null || arr.length === 0)
+            return 0;
+        
+        if (arr.length < min) min = arr.length;
+        if (arr.length > max) max = arr.length;
+        
+        sum += arr.length;
+    }
+
+    return (min + max) / 2 * (max - min + 1) - sum;
+}
+
+4. Pair of gloves
+function numberOfPairs(gloves) {
+    let pairs = 0, counts = {};
+
+    for (const glove of gloves) {
+        if (isNaN(counts[glove])) counts[glove] = 0;
+
+        if (++counts[glove] === 2) {
+            counts[glove] -= 2;
+            pairs++;
+        }
+    }
+    
+    return pairs;
+}
+
+5. Sorting by bits
+function sortByBit(arr) {
+  arr.sort((a, b) => a.toString(2).replace(/0/g, '') - b.toString(2).replace(/0/g, '') || a - b)
+}
+
+6. Let's Recycle!
+function recycle(array) {
+    const paper = [], glass = [], organic = [], plastic = [];
+
+    for (obj of array) {
+        eval(obj['material'] + ".push(obj['type'])");
+
+        if (obj['secondMaterial'] != undefined)
+            eval(obj['secondMaterial'] + ".push(obj['type'])");
+    }
+
+    return [paper, glass, organic, plastic];
+}
+<p align = "center" >ВЫВОД</p>
+<p>Подводя итог всему сказанному, могу сделать вывод, что, поработав на javascript, я вспомнил многое и применил это на практике. Все задачи были выполнены.</p>
