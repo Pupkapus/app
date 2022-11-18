@@ -530,7 +530,7 @@ function last(arr) {
 }
 ```
 
-### [Array Deep Count]
+[Array Deep Count]
 ```js
 function deepCount(arr) {
     return arr
@@ -540,7 +540,7 @@ function deepCount(arr) {
 };
 ```
 
-### [Length of missing array]
+[Length of missing array]
 
 ```js
 function getLengthOfMissingArray(arrayOfArrays) {
@@ -563,7 +563,7 @@ function getLengthOfMissingArray(arrayOfArrays) {
 }
 ```
 
-### [Pair of gloves]
+[Pair of gloves]
 
 ```js
 function numberOfPairs(gloves) {
@@ -582,7 +582,7 @@ function numberOfPairs(gloves) {
 }
 ```
 
-### [Sorting by bits]
+[Sorting by bits]
 
 ```js
 function sortByBit(arr) {
@@ -590,7 +590,7 @@ function sortByBit(arr) {
 }
 ```
 
-### [Let's Recycle!]
+[Let's Recycle!]
 
 ```js
 function recycle(array) {
