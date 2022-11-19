@@ -142,3 +142,241 @@ function onlyDoubles(arr) {
 
 let doubles = [1, 1, 1, 1, 1, 2, 3, 4, 4, 5, 6, 7, 7, 7];
 console.log(onlyDoubles(doubles));
+
+//12_задание
+console.log("12_zadanie");
+
+let arr2 = [4,-5,22,13,1,-9,45,-5,8,9];
+console.log(arr2);
+let max = arr2[0];
+let ind = 0;
+for (let i=1; i<arr2.length; i++)
+{
+    if (arr2[i]>max)
+    {
+        max = arr2[i];
+        ind = i;
+    }
+}
+
+for (let i = 0; i < 3; i++) {
+    if (ind === arr2.length - 1) break;
+    let temp1 = arr2[ind + 1];
+    arr2.splice(ind + 1, 1);//1 позиция откуда удаляем/вставляем, 2 позиция сколько удаляем
+    arr2.splice(ind, 0, temp1);//3 позиция, что вставляем
+    ind++;
+}
+
+let temp2 = arr2[ind - 1];
+arr2.splice(ind-1,1);
+arr2.splice(ind, 0, temp2);
+
+console.log(arr2);
+
+//13_задание
+console.log("13_zadanie");
+
+function otr(arr)
+{
+    let summa=0;
+    for (let i=0; i<arr.length;i++)
+    {
+        if (arr[i]<0)
+        {
+            summa+=arr[i];
+        }
+    }
+    return summa
+}
+
+let arr3=[1,-1,2,-2,3,-3,4,-4,5,-5];
+console.log(otr(arr3));
+
+//14_задание
+console.log("14_zadanie");
+
+function proizv(arr)
+{
+    let otvet = 1;
+    for (let i=0 ; i < arr.length; i++)
+    {
+        if (i%2==1)
+        {
+            otvet *=arr[i];
+        }
+    }
+    return otvet;
+}
+
+var arr4 = [1,2,3,4,5,4,3,2,1];
+console.log(proizv(arr4));
+
+//15_задание
+console.log("15_zadanie");
+
+function mezh0(arr)
+{
+    let poz1, poz2, summa2=0;
+    for(let i=0; i < arr.length-1; i++ )
+    {
+        if (poz1==undefined)
+        {
+            if (arr[i]==0)
+            {poz1 = i;}
+        }
+        else if (poz2==undefined)
+        {
+            if (arr[i]==0)
+            {poz2 = i;}
+        }
+        else{break;}
+    }
+    if ((poz1==undefined)||(poz2==undefined))
+    {return summa2;}
+    else{
+        for (let j=poz1+1; j < poz2; j++)
+        {
+            if (j==poz2)
+            {
+                break;
+            }
+            else{
+                summa2 +=arr[j];
+            }
+        }
+    }
+    return summa2;
+}
+
+var arr15=[1,2,0,5,6,7,0,4,3,2];
+console.log(mezh0(arr15));
+
+//16_задание
+console.log("16_zadanie");
+
+function Maximum(arr)
+{
+    max = arr[0];
+    for (let i=1; i<arr.length; i++)
+    {
+        if (arr[i]>max)
+        {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+console.log(Maximum(arr15));
+
+//17_задание
+console.log("17_zadanie");
+
+function Minchet(arr)
+{
+    let min=arr[0];
+    for (let i=1;i<arr.length;i++)
+    {
+        if (i%2==0)
+        {
+            if (arr[i]<min)
+            {min = arr[i];}
+        }
+    }
+    return min;
+}
+console.log(Minchet(arr15));
+
+//18_задание
+console.log("18_zadanie");
+
+function StartsWithZeros(arr) {
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] === 0)
+            arr.unshift(arr.splice(i--, 1)[0]);
+    }
+}
+var arr18 = [0, 1, 2, 3, 0, 4, 5, 0, 6, 7, 0, 8, 0, 0, 0, 9];
+StartsWithZeros(arr18);
+console.log(arr18);
+
+//19_задание
+console.log("19_zadanie");
+
+function SumNumbMinMax(arr)
+{
+    let ind1, ind2, summa3;
+    max = arr[0];
+    for (let i=1; i< arr.length; i++)
+    {
+        if (arr[i]>max)
+        {
+            max = arr[i];
+            ind1 = i;
+        }
+    }
+    min = arr[0];
+    for(i = 1; i < arr.length; i++)
+    {
+        if (arr[i]<min)
+        {
+            min = arr[i];
+            ind2 = i;
+        }
+    }
+    summa3=ind1+ind2;
+    return summa3;
+}
+var arr19 = [2,-5,45,23,-8,10];
+console.log(SumNumbMinMax(arr19));
+
+//20_задание
+console.log("20_zadanie");
+
+function minmod(arr)
+{
+    min = arr[0];
+    for(i = 1; i < arr.length; i++)
+    {
+        if (Math.abs(arr[i]) < Math.abs(min))
+        {
+            min = arr[i];
+        }
+    }
+    return min;
+}
+
+let arr20 = [-3, -2, -1, 1, 2, 3];
+console.log(minmod(arr20));
+
+//21_задание
+console.log("21_zadanie");
+
+function RandRevers() {
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr[i] = Math.floor(Math.random() * (10 - -10 + 1)) - 10;
+    }
+
+    return arr = [...arr.slice(0, 5).reverse(), ...arr.slice(5, 10).reverse()]
+}
+console.log(RandRevers());
+
+//22_задание
+console.log("22_zadanie");
+
+function z22()
+{
+    let arr = [];
+    for (let i = 0; i < 12; i++) {
+        arr[i] = Math.floor(Math.random() * (12 - -12 + 1)) - 12;
+    }
+    console.log(arr);
+
+    for (let i = 0; i < 4; i++) {
+        arr.unshift(arr.pop());
+    }
+
+    return arr;
+}
+
+console.log(z22());
