@@ -409,7 +409,76 @@ console.log(z22());
 
 <p align = "center" >Codewars</p>
 
+[Javascript Mathematician]
+```js
+function calculate(...args1) {
+    return function (...args2) {
+        return [].concat([...args1], [...args2]).reduce((a, b) => a + b, 0);
+    }
+}
+```
 
+[Javascript from the Inside #1 : Map]
+```js
+Array.prototype.map = function (callback, context) {
+    const newArr = new Array(this.length)
+    
+    for (let i = 0; i < this.length; i++) {
+        if (i in this) newArr[i] = callback.call(context,this[i], i, this)
+    }
+
+    return newArr
+}
+```
+
+[Javascript from the Inside #2: Filter]
+```js
+Array.prototype.filter = function (callback, context) {
+    const newArr = [];
+    const len = this.length;
+  
+    for (let i = 0; i < len; i++) {
+        if (i in this && callback.call(context,this[i], i, this))
+          newArr.push(this[i]);
+    }
+  
+    return newArr;
+}
+```
+
+[Power .bind()]
+```js
+Function.prototype.bind = function (root) {
+  return (child = root) => this.call(child, child);
+};
+```
+
+[Closures and Scopes]
+```js
+function createFunctions(n) {
+  var callbacks = [];
+
+  for (let i=0; i<n; i++) {
+    callbacks.push(function() {
+      return i;
+    });
+  }
+  
+  return callbacks;
+}
+```
+
+[Can you keep a secret?]
+```js
+function createSecretHolder(secret) {
+  return {
+    getSecret: function() { return secret; },
+    setSecret: function(scr) { secret = scr; }
+  };
+}
+```
+
+***
 
 
 <p align = "center" >ВЫВОД</p>
