@@ -5,11 +5,107 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div {
+         height: 20px; 
+         background: #f0f0f0; 
+         padding: 5px; 
+         border: 1px solid #333; 
+        }
+       </style>
 </head>
 <body>
     <script>
+        function z1()
+        {
+            alert("HELLOOOOOOOOOOOOOOO!");
+        }
 
-        
-        </script>
+        function z2()
+        {
+            let txt = 'new '; 
+            document.getElementById("text").value += txt;
+        }
+
+        function z3()
+        {
+            let text = document.getElementById("text3").value;
+            alert(text);
+        }
+
+        function z4()
+        {
+            let chislo = document.getElementById("text4").value;
+            document.getElementById("text4").value = chislo*chislo;
+        }
+        function z5()
+        {
+            let text1 = document.getElementById("text5.1").value;
+            let text2 = document.getElementById("text5.2").value;
+            document.getElementById("text5.1").value = text2;
+            document.getElementById("text5.2").value = text1;
+        }
+        function z6()
+        {
+            let text = document.getElementById("text6").value;
+            if (text=='Привет')
+            {
+                document.getElementById("text6").value = "Пока";
+            }
+            else if(text=='Пока')
+            {
+                document.getElementById("text6").value = "Привет";
+            }
+        }
+
+        function z7()
+        {
+            let text = document.getElementById("text7");
+            text.style.color = "blue";
+        }
+
+        function z8_1()
+        {
+            temp = document.getElementById("text8");
+            temp.disabled = true;
+        }
+        function z8_2()
+        {
+            temp = document.getElementById("text8");
+            temp.disabled = false;
+        }
+
+        function z9()
+        {
+            alert("OOO MY GOD!");
+        }
+
+        function z12()
+        {
+            let image = document.getElementById("im");
+            image.src = "US22.jpg";
+        }
+    </script>
+    <p> 1zadanie </p> <button type="button" onclick=z1()>alert</button>
+    <p> 2zadanie </p> <button type="submit" onclick=z2()>text change input</button>
+    <input type="text" name = "text" id = "text" value="" />
+    <p> 3zadanie </p> <button type="button" onclick=z3()>conclusion input</button>
+    <input type="text" name = "text" id = "text3" value="" />
+    <p> 4zadanie </p> <button type="submit" onclick=z4()>square number</button>
+    <input type="text" name = "text" id = "text4" value="" />
+    <p> 5zadanie </p> <button type="button" onclick=z5()>reverse</button>
+    <input type="text" name = "text" id = "text5.1" value="" />
+    <input type="text" name = "text" id = "text5.2" value="" />
+    <p> 6zadanie </p> <button type="button" onclick=z6()>change text</button>
+    <input type="text" name = "text" id = "text6" value="Привет" />
+    <p> 7zadanie </p> <button type="button" onclick=z7()>color text</button>
+    <input type="text" name = "text" id = "text7" value="Что-то написано" />
+    <p> 8zadanie </p> <button type="button" onclick=z8_1()>1</button><button type="button" onclick=z8_2()>2</button></br>
+    <input type="text" name = "text" id = "text8" value="1 блочит, 2 наоборот" />
+    <p> 9zadanie </p> <button type="button" onmouseover=z9()>onmouseover</button>
+    <p> 10zadanie </p> <button type="button" ondblclick=z9()>doubleclick</button>
+    <p> 11zadanie </p> <div onmouseover=z9()> </div>
+    <p> 12zadanie <img src="US.jpg" id="im"></p></br>
+    <button type="button" onclick=z12()>change image</button>
 </body>
 </html>
