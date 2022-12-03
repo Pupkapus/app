@@ -85,6 +85,26 @@
             let image = document.getElementById("im");
             image.src = "US22.jpg";
         }
+        function z13()
+        {
+            let prop = alert("How do you do?");
+            return this.prop;
+        }
+
+        function ChangeInput(elem, text)
+        {
+            elem.value += text;
+        }
+        function z14()
+        {
+            let btn = document.getElementById("btn14");
+            if (btn.onclick)
+            {
+                let inp = document.getElementById("text14");
+                let temp = ChangeInput(inp, 'new');
+                document.getElementById('text14').value = this.temp;
+            }
+        }
     </script>
     <p> 1zadanie </p> <button type="button" onclick=z1()>alert</button>
     <p> 2zadanie </p> <button type="submit" onclick=z2()>text change input</button>
@@ -107,5 +127,9 @@
     <p> 11zadanie </p> <div onmouseover=z9()> </div>
     <p> 12zadanie <img src="US.jpg" id="im"></p></br>
     <button type="button" onclick=z12()>change image</button>
+    <p> 13zadanie</p></br>
+    <button type="button" onclick=z13()>alert через this</button>
+    <p> 14zadanie </p> <button type="button" name = "btn14" onclick=z14()>text change input</button>
+    <input type="text" name = "text" id = "text14" value="" />
 </body>
 </html>
