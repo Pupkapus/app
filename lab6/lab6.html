@@ -11,7 +11,7 @@
          background: #f0f0f0; 
          padding: 5px; 
          border: 1px solid #333; 
-        }
+        }        
        </style>
 </head>
 <body>
@@ -91,20 +91,52 @@
             return this.prop;
         }
 
-        function ChangeInput(elem, text)
-        {
-            elem.value += text;
-        }
+        
         function z14()
         {
             let btn = document.getElementById("btn14");
-            if (btn.onclick)
+            btn.onclick = ChangeInput(this.document.getElementById("text14"), "new");
+            function ChangeInput(elem, text)
             {
-                let inp = document.getElementById("text14");
-                let temp = ChangeInput(inp, 'new');
-                document.getElementById('text14').value = this.temp;
+                elem.value = text;
             }
         }
+
+        function z15()
+        {
+            let btn  = document.getElementById("btn15");
+            btn.disabled = true;
+        }
+
+        function z16()
+        {
+            let btn = document.getElementById("btn16");
+            var count = document.getElementById("lab16").innerHTML;
+            if(btn.click)
+            {
+                count++;
+            } 
+            document.getElementById("lab16").innerHTML = count;
+        }
+        function z17()
+        {
+            document.body.style.cursor = "se-resize";
+        }
+
+        function z18()
+        {
+            document.getElementById('hide').hidden = true;
+        }
+
+        function z19()
+        {
+            document.getElementById('btn19').hidden = true;
+        }
+        function z20()
+        {
+            
+        }
+
     </script>
     <p> 1zadanie </p> <button type="button" onclick=z1()>alert</button>
     <p> 2zadanie </p> <button type="submit" onclick=z2()>text change input</button>
@@ -125,11 +157,18 @@
     <p> 9zadanie </p> <button type="button" onmouseover=z9()>onmouseover</button>
     <p> 10zadanie </p> <button type="button" ondblclick=z9()>doubleclick</button>
     <p> 11zadanie </p> <div onmouseover=z9()> </div>
-    <p> 12zadanie <img src="US.jpg" id="im"></p></br>
+    <p> 12zadanie </p></br>
+    <img src="US.jpg" id="im">
     <button type="button" onclick=z12()>change image</button>
     <p> 13zadanie</p></br>
     <button type="button" onclick=z13()>alert через this</button>
-    <p> 14zadanie </p> <button type="button" name = "btn14" onclick=z14()>text change input</button>
-    <input type="text" name = "text" id = "text14" value="" />
+    <p> 14zadanie </p> <button type="button" name = "btn14" onclick=z14() id ="btn14">text change input</button>
+    <input type="text" name = "text" id = "text14" value="Nya" />
+    <p> 15zadanie </p> <button type="button" name = "btn15" onclick=z15() id ="btn15">disabled button</button>
+    <p> 16zadanie </p> <button type="button" name = "btn16" onclick=z16() id ="btn16">count button</button><label id = "lab16">0</label>
+    <p> 17zadanie </p> <button type="button" name = "btn17" onclick=z17() id ="btn17">cursor</button>
+    <p> 18zadanie </p> <input type="button" onclick=z18() id="hider" value="Нажмите, чтобы спрятать текст" />
+    <div id="hide">Текст</div>
+    <p> 19zadanie </p> <button type="button" name = "btn19" onclick=z19() id ="btn19">invize button</button>
 </body>
 </html>
