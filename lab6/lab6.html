@@ -136,9 +136,79 @@
         {
             document.getElementById('btn19').hidden = true;
         }
-        function z20()
-        {
 
+
+        function summ(){
+            if(Number(document.getElementById('first').value) && Number(document.getElementById('second').value))
+            {
+                document.getElementById('result').value = Number(document.getElementById('first').value) + Number(document.getElementById('second').value);
+            }
+            else
+            {
+                alert('Вам необходимо ввести 2 числа')
+            }
+        }
+
+        function razn(){
+            if(Number(document.getElementById('first').value) && Number(document.getElementById('second').value))
+            {
+                document.getElementById('result').value = Number(document.getElementById('first').value) - Number(document.getElementById('second').value);
+            }
+            else
+            {
+                alert('Вам необходимо ввести 2 числа')
+            }
+        }
+        
+        function proiz(){
+            if(Number(document.getElementById('first').value) && Number(document.getElementById('second').value))
+            {
+                document.getElementById('result').value = Number(document.getElementById('first').value) * Number(document.getElementById('second').value);
+            }
+            else
+            {
+                alert('Вам необходимо ввести 2 числа')
+            }
+        }
+
+        function del(){
+            if(Number(document.getElementById('first').value) && Number(document.getElementById('second').value))
+            {
+                document.getElementById('result').value = Number(document.getElementById('first').value) / Number(document.getElementById('second').value);
+            }
+            else
+            {
+                alert('Вам необходимо ввести 2 числа')
+            }
+        }
+
+        function first (){
+            active = 1;
+        }
+
+        function second (){
+            active = 2;
+        }
+
+        function input (a){
+            let where = 0;
+            switch(active)
+            {
+                case 1:
+                    document.getElementById('first').value += a;
+                    break;
+                case 2:
+                    document.getElementById('second').value += a;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        function empty(){
+            document.getElementById('first').value = ""
+            document.getElementById('second').value = ""
+            document.getElementById('result').value = ""
         }
 
     </script>
@@ -175,11 +245,12 @@
     <div id="hide">Текст</div>
     <p> 19zadanie </p> <button type="button" name = "btn19" onclick=z19() id ="btn19">invize button</button>
     <p> 20zadanie </p>
-    <div style = "width: 310px;"></div>
-    <button type="button" name = "C" onclick=C() id ="C">C</button><button>+/-</button><button>%</button><button>/</button></br>
-    <button>7</button><button>8</button><button>9</button><button>*</button></br>
-    <button>4</button><button>5</button><button>6</button><button>-</button></br>
-    <button>1</button><button>2</button><button>3</button><button>+</button></br>
-    <button style="width: 160px;" >0</button><button>.</button><button>=</button>
+    <input disabled type="text" name="first" id="first"> <input disabled type="text" name="second" id="second"> <span> = </span> <input disabled type="text" name="result" id="result"><br><br>
+    <button onclick="summ()">Сумма</button><button onclick="razn()">Разность</button><button onclick="proiz()">Произведение</button><button onclick="del()">Частное</button><br><br>
+    <button onclick="input(1)">1</button><button onclick="input(2)">2</button><button onclick="input(3)">3</button><br><br>
+    <button onclick="input(4)">4</button><button onclick="input(5)">5</button><button onclick="input(6)">6</button><br><br>
+    <button onclick="input(7)">7</button><button onclick="input(8)">8</button><button onclick="input(9)">9</button><br><br>
+    <button onclick="first()">first</button><button onclick="input(0)">0</button><button onclick="second()">second</button><br><br>
+    <button onclick="empty()">Очистить</button><br><br>
 </body>
 </html>
