@@ -182,7 +182,7 @@
 <p align = "center" >CODEWARS</p>
 
 1.
-
+<img src="Codewars1.png">
 2.
 
 3.
