@@ -259,7 +259,8 @@
 ```
 <p align = "center" >CODEWARS</p>
 
-1.<a src = "Codewars1.png">
+1.
+<img src="Codewars1.png">
 
 ***
 
