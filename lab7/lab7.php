@@ -12,6 +12,9 @@
     echo "<h2>" . "1 zadanie" . "</h2>" . " ". $var . "</br>";
     echo $var[0] . ", " . $var[1] . ", " . $var[4] . "</br>" ;
     ?>
+    <?php
+    
 
+    ?>
 </body>
 </html>
