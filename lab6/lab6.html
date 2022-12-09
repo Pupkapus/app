@@ -172,7 +172,11 @@
         }
 
         function del(){
-            if(Number(document.getElementById('first').value) && Number(document.getElementById('second').value))
+            if (Number(document.getElementById('second').value)==0)
+            {
+                    alert("На ноль делить нельзя!");
+            }
+            else if(Number(document.getElementById('first').value) && Number(document.getElementById('second').value))
             {
                 document.getElementById('result').value = Number(document.getElementById('first').value) / Number(document.getElementById('second').value);
             }
