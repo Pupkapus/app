@@ -184,29 +184,29 @@
 1.
 <img src="Codewars1.png">
 2.
-
+<img src="Codewars2.png">
 3.
-
+<img src="Codewars3.png">
 4.
-
+<img src="Codewars4.png">
 5.
-
+<img src="Codewars5.png">
 6.
-
+<img src="Codewars6.png">
 7.
-
+<img src="Codewars7.png">
 8.
-
+<img src="Codewars8.png">
 9.
-
+<img src="Codewars9.png">
 10.
-
+<img src="Codewars10.png">
 11.
-
+<img src="Codewars11.png">
 12.
-
+<img src="Codewars12.png">
 13.
-
+<img src="Codewars13.png">
 ***
 
 
