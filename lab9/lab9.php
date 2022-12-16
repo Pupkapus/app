@@ -394,9 +394,7 @@ echo "<h2>" . "15 zadanie" . "</h2>" ;
 
     $i = 0;
     foreach ($quests as $quest => $answer) {
-      // Вопрос №
       echo $quest . "<br>";
-      // Ваш ответ: 
       if (isset($_POST["submit"])) {
         echo "Ваш ответ: [";
         $userAnswer = [];
@@ -405,16 +403,14 @@ echo "<h2>" . "15 zadanie" . "</h2>" ;
             array_push($userAnswer, $_POST["radio18$i$j"]);
           }
         }
-        // Ответ
         echo implode(", ", $userAnswer) . "] - ";
-        // Верно/Неверно
+
         if (!array_diff($userAnswer, $answer) && !array_diff($answer, $userAnswer))
           echo '<span class = "correct">верно!';
         else
           echo '<span class = "wrong">неверно!';
         echo "</span></p>";
       } else {
-        // Чекбоксы  
         for ($j = 0; $j < count($variants[$i]); $j++)
           echo '
             <input type="checkbox" name="radio18' . $i . $j . '" value="' . $variants[$i][$j] . '">
