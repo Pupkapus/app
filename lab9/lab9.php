@@ -135,15 +135,27 @@
     </form>
 
     <?php
-    echo "<h2>" . "8 zadanie" . "</h2>" ;
-    $prazd = [
-        '1712' => 'super'
+    $newYear = date("12-31");
+    $hallowen = date("10-31");
+    $christmas = date("01-07");
+    $Varmoroz = date("12-17");
+    $holidays = [
+        $newYear => "Новый год",
+        $hallowen => "Хэллоуин",
+        $christmas => "Рождество Христово",
+        $Varmoroz => "Варварины Морозы"
     ];
-    $date = date('dm', time());
-    if (array_key_exists($date, $prazd)) {
-        echo $prazd[$date];
+  
+    $today = date("m-d");
+    foreach ($holidays as $key => $value) {
+    if ($today == $key) {
+      $output = "Поздравляем с праздником: $value!";
+      break;
     }
-    ?>
+    $output = "Сегодня нет никакого праздника";
+    }
+  echo $output;
+  ?>
     
 <h2>9 zadanie</h2>
 <?php
